@@ -27,6 +27,7 @@ public class User implements UserDetails {
     private Long id;
     @Column(nullable = false, unique = true)
     private String username;
+    @JsonIgnore
     private String password;
     private String firstname;
     private String lastname;
@@ -35,36 +36,37 @@ public class User implements UserDetails {
     @OneToOne(cascade = CascadeType.ALL)
     @JsonIgnore
     private Otp otp;
+    @JsonIgnore
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
     }
-
+    @JsonIgnore
     @Override
     public String getUsername() {
         return this.username;
     }
-
+    @JsonIgnore
     @Override
     public boolean isAccountNonExpired() {
         return false;
     }
-
+    @JsonIgnore
     @Override
     public boolean isAccountNonLocked() {
         return false;
     }
-
+    @JsonIgnore
     @Override
     public boolean isCredentialsNonExpired() {
         return false;
     }
-
+    @JsonIgnore
     @Override
     public boolean isEnabled() {
         return false;
     }
-
+    @JsonIgnore
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -72,7 +74,7 @@ public class User implements UserDetails {
         User user = (User) o;
         return Objects.equals(id, user.id);
     }
-
+    @JsonIgnore
     @Override
     public int hashCode() {
         return Objects.hash(id);

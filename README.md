@@ -169,23 +169,44 @@ https://registration-api-1.onrender.com/swagger-ui/index.html
     "content": [
         {
             "id": 1,
-            "username": "aakarsh09",
-            "password": "$2a$10$DT.heK7eFKNLmjt.q0zUQ.DGXoqKVZExGX39KeXQ4vLlbnBTiSSMC",
             "firstname": "Aakarsh",
             "lastname": "Singh",
             "email": "singhaakarsh54321@gmail.com",
-            "isVerified": true,
-            "enabled": false,
-            "authorities": null,
-            "accountNonExpired": false,
-            "accountNonLocked": false,
-            "credentialsNonExpired": false
+            "isVerified": true
+        },
+        {
+            "id": 2,
+            "firstname": "Aakarsh",
+            "lastname": "Singh",
+            "email": "singhaakarsh54321@gmail.com",
+            "isVerified": false
+        },
+        {
+            "id": 3,
+            "firstname": "Aakarsh",
+            "lastname": "Singh",
+            "email": "singhaakarsh54321@gmail.com",
+            "isVerified": false
+        },
+        {
+            "id": 4,
+            "firstname": "Aakarsh",
+            "lastname": "Singh",
+            "email": "singhaakarsh54321@gmail.com",
+            "isVerified": false
+        },
+        {
+            "id": 5,
+            "firstname": "Aakarsh",
+            "lastname": "Singh",
+            "email": "singhaakarsh54321@gmail.com",
+            "isVerified": false
         }
     ],
     "page": {
         "size": 10,
         "number": 0,
-        "totalElements": 1,
+        "totalElements": 5,
         "totalPages": 1
     }
 }
@@ -200,23 +221,23 @@ https://registration-api-1.onrender.com/swagger-ui/index.html
     "content": [
         {
             "id": 1,
-            "username": "aakarsh09",
-            "password": "$2a$10$DT.heK7eFKNLmjt.q0zUQ.DGXoqKVZExGX39KeXQ4vLlbnBTiSSMC",
             "firstname": "Aakarsh",
             "lastname": "Singh",
             "email": "singhaakarsh54321@gmail.com",
-            "isVerified": true,
-            "enabled": false,
-            "authorities": null,
-            "accountNonExpired": false,
-            "accountNonLocked": false,
-            "credentialsNonExpired": false
+            "isVerified": true
+        },
+        {
+            "id": 2,
+            "firstname": "Aakarsh",
+            "lastname": "Singh",
+            "email": "singhaakarsh54321@gmail.com",
+            "isVerified": false
         }
     ],
     "page": {
         "size": 10,
         "number": 0,
-        "totalElements": 1,
+        "totalElements": 2,
         "totalPages": 1
     }
 }
