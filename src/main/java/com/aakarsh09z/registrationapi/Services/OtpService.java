@@ -34,16 +34,16 @@ public class OtpService {
     /*
         Store the OTP in the database
      */
-    public void sendOtp(String email) throws MessagingException {
+    public void sendOtp(String username) throws MessagingException {
         String OTP= this.generateOtp();
         LocalDateTime expirationTime=LocalDateTime.now().plusMinutes(AppConstants.OTP_EXPIRATION_MINUTE);
-        User user=userRepository.findByEmail(email).orElseThrow(()-> new ResourceNotFoundException("User","email",0));
+        User user=userRepository.findByUsername(username).orElseThrow(()-> new ResourceNotFoundException("User","username"+username,0));
         Otp otp = new Otp();
         otp.setValue(OTP);
         otp.setExpirationTime(expirationTime);
         user.setOtp(otp);
         userRepository.save(user);
-        emailService.sendOtpEmail(email,OTP);
+        emailService.sendOtpEmail(user.getEmail(),OTP);
     }
     /*
         Generate a 6 digit OTP

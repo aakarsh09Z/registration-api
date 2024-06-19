@@ -72,7 +72,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
         // Sending OTP to the email of the user for verification
         try {
-            otpService.sendOtp(request.getEmail());
+            otpService.sendOtp(user.getUsername());
         }
         catch(MessagingException e){
             e.printStackTrace();
