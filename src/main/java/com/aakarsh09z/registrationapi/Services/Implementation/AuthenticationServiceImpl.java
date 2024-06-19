@@ -89,7 +89,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     @Override
     public ResponseEntity<?> verifyToRegister(VerifyToRegisterRequest request){
 
-        String username=request.getUsername().trim().toLowerCase();
+        String username=request.getUsername().trim();
         // If the email of user is not present in the database then the user never generated OTP
         if(userRepository.findByUsername(username).isEmpty()){
             return new ResponseEntity<>(new ApiResponse("No OTP generated",false),HttpStatus.NOT_FOUND);
