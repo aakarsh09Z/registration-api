@@ -4,5 +4,5 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
 EXPOSE 8080
-COPY --from=build target/.jar registration-api.jar
+COPY --from=build target/registration-api.jar registration-api.jar
 ENTRYPOINT ["java","-jar","/registration-api.jar"]
