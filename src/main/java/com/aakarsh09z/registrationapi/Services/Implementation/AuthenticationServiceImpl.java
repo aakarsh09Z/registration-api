@@ -113,7 +113,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
                 email: Email of the User
                 success: Boolean response whether the API ran successfully or not
          */
-        JwtTokenResponse response = this.jwtTokenGenerator.generateToken(request.getEmail());
+        JwtTokenResponse response = this.jwtTokenGenerator.generateToken(user.getUsername());
         // User is verified
         user.setIsVerified(true);
         userRepository.save(user);
