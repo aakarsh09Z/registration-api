@@ -41,7 +41,6 @@ public class User implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
     }
-    @JsonIgnore
     @Override
     public String getUsername() {
         return this.username;

@@ -169,6 +169,7 @@ https://registration-api-1.onrender.com/swagger-ui/index.html
     "content": [
         {
             "id": 1,
+            "username": "aakarsh09",
             "firstname": "Aakarsh",
             "lastname": "Singh",
             "email": "singhaakarsh54321@gmail.com",
@@ -176,6 +177,7 @@ https://registration-api-1.onrender.com/swagger-ui/index.html
         },
         {
             "id": 2,
+            "username": "aakarsh",
             "firstname": "Aakarsh",
             "lastname": "Singh",
             "email": "singhaakarsh54321@gmail.com",
@@ -183,6 +185,7 @@ https://registration-api-1.onrender.com/swagger-ui/index.html
         },
         {
             "id": 3,
+            "username": "askjdn12",
             "firstname": "Aakarsh",
             "lastname": "Singh",
             "email": "singhaakarsh54321@gmail.com",
@@ -190,6 +193,7 @@ https://registration-api-1.onrender.com/swagger-ui/index.html
         },
         {
             "id": 4,
+            "username": "asa1233s2",
             "firstname": "Aakarsh",
             "lastname": "Singh",
             "email": "singhaakarsh54321@gmail.com",
@@ -197,6 +201,7 @@ https://registration-api-1.onrender.com/swagger-ui/index.html
         },
         {
             "id": 5,
+            "username": "asa132847asjhash",
             "firstname": "Aakarsh",
             "lastname": "Singh",
             "email": "singhaakarsh54321@gmail.com",
@@ -221,6 +226,7 @@ https://registration-api-1.onrender.com/swagger-ui/index.html
     "content": [
         {
             "id": 1,
+            "username": "aakarsh09",
             "firstname": "Aakarsh",
             "lastname": "Singh",
             "email": "singhaakarsh54321@gmail.com",
@@ -228,6 +234,7 @@ https://registration-api-1.onrender.com/swagger-ui/index.html
         },
         {
             "id": 2,
+            "username": "aakarsh",
             "firstname": "Aakarsh",
             "lastname": "Singh",
             "email": "singhaakarsh54321@gmail.com",
