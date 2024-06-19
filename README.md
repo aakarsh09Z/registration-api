@@ -29,13 +29,13 @@ https://registration-api-1.onrender.com/swagger-ui/index.html
     "success": true
 }
 ~~~
-**Invalid Email Format**
+**Invalid Email Format Response**
 ~~~
 {
     "email": "Invalid email format"
 }
 ~~~
-***Invalid Username Format***
+***Invalid Username Format Response***
 ~~~
 {
     "username": "Username must be alphanumeric and between 6 to 20 characters"
@@ -48,10 +48,11 @@ https://registration-api-1.onrender.com/swagger-ui/index.html
 ***POST***
 ~~~
 {
-    "email":"singhaakarsh54321@gmail.com",
-    "otp":"124326"
+    "username":"aakarsh09",
+    "otp":"663572"
 }
 ~~~
+**Success Response**
 ~~~
 {
     "accessToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYWthcnNoMDkiLCJpYXQiOjE3MTg4MTEzMDksImV4cCI6MTcxODg5NzcwOX0.crFo14rJDYgNxKhdWlUKUoZ3ad9sRFwJib9-76XabqJVy5SGd0B1fUeera5EDnkfU8CJIjpPm_nN5TmYTCOQKA",
@@ -59,6 +60,13 @@ https://registration-api-1.onrender.com/swagger-ui/index.html
     "username": "aakarsh09",
     "email": "singhaakarsh54321@gmail.com",
     "success": true
+}
+~~~
+**Incorrect OTP Response**
+~~~
+{
+    "message": "Incorrect OTP",
+    "success": false
 }
 ~~~
 - ### Login
@@ -152,7 +160,7 @@ https://registration-api-1.onrender.com/swagger-ui/index.html
   "success": true
 }
 ~~~
-**Failure response**
+**Failure Response**
 ~~~
 {
     "message": "Not a Refresh Token",

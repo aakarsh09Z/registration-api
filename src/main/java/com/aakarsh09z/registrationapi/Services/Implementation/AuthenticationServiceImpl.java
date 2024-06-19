@@ -88,18 +88,19 @@ public class AuthenticationServiceImpl implements AuthenticationService {
      */
     @Override
     public ResponseEntity<?> verifyToRegister(VerifyToRegisterRequest request){
-        String email=request.getEmail().trim().toLowerCase();
-        // If the email is not present in the database then the user never registered
-        if(userRepository.findByEmail(email).isEmpty()){
+
+        String username=request.getUsername().trim().toLowerCase();
+        // If the email of user is not present in the database then the user never generated OTP
+        if(userRepository.findByUsername(username).isEmpty()){
             return new ResponseEntity<>(new ApiResponse("No OTP generated",false),HttpStatus.NOT_FOUND);
         }
         // Fetch the OTP stored in the database
-        String OTP = otpService.getOtpByEmail(request.getEmail());
+        String OTP = otpService.getOtpByUsername(username);
         // Checking if the OTP received by the user matches with the one stored in the database
         if(!(request.getOtp().equals(OTP))){
             return new ResponseEntity<>(new ApiResponse("Incorrect OTP",false),HttpStatus.UNAUTHORIZED);
         }
-        User user = userRepository.findByEmail(request.getEmail()).orElseThrow(()->new ResourceNotFoundException("User","Email",0));
+        User user = userRepository.findByUsername(username).orElseThrow(()->new ResourceNotFoundException("User","username"+username,0));
         Otp otp=user.getOtp();
         // If the OTP generated has been in the database for 10 minutes or more it is expired
         if(LocalDateTime.now().isAfter(otp.getExpirationTime())){
@@ -117,8 +118,8 @@ public class AuthenticationServiceImpl implements AuthenticationService {
         // User is verified
         user.setIsVerified(true);
         userRepository.save(user);
-        response.setUsername(user.getUsername());
-        response.setEmail(request.getEmail());
+        response.setUsername(username);
+        response.setEmail(user.getEmail());
         response.setSuccess(true);
         return new ResponseEntity<>(response,HttpStatus.OK);
     }

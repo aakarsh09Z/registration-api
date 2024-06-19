@@ -25,9 +25,9 @@ public class OtpService {
     /*
         Get the OTP stored in the database
      */
-    public String getOtpByEmail(String email) {
-        User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new ResourceNotFoundException("User","OTP",0));
+    public String getOtpByUsername(String username) {
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new ResourceNotFoundException("User","username"+username,0));
 
         return user.getOtp().getValue();
     }
